@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="josephj">
+<meta name="created" content="2014-07-22">
+<title>FitBox</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<style type="text/css">
+body {
+    padding: 10px;
+}
+input[type=number] {
+    width: 40px;
+    text-align: center;
+}
+.foo {
+    font-family: Verdana;
+    font-size: 50px;
+    line-height: 1;
+    width: 600px;
+    height: 300px;
+    border: solid 3px #ccc;
+    padding: 10px;
+    margin: 5px;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+    <h1>FitBox</h1>
+    <pre>
+    $('.foo').fitBox({
+        adjustAfterWindowResize: true,
+        minFontSize: '24px'
+    });
+    </pre>
+    <div class="foo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/media/js/main/jquery.dotdotdot.min.js"></script>
+    <script src="fit-box.js"></script>
+    <script>
+    (function () {
+        var startTime, duration;
+        startTime = new Date();
+        $('.foo').fitBox({
+            adjustAfterWindowResize: true,
+            minFontSize: '24px'
+        });
+        duration = parseInt((new Date()) - startTime, 10);
+        console.log(duration + 'ms spent');
+    }());
+    </script>
+</body>
+</html>
