@@ -16,14 +16,14 @@
      *
      * OR...
      *
-     * $(container).fitBox('option', {
+     * $(container).fitbox('option', {
      *     minFontSize: '50px',
      *     maxFontSize: '100px',
      *     adjustAfterWindowResize: false,
      *     truncateStyle: 'ellipsis'
      * });
      *
-     * @constructor  Fitbox
+     * @constructor FitBox
      */
     function FitBox(container, attrs) {
         var that = this;
@@ -39,7 +39,6 @@
     FitBox.MAX_TRY_AMOUNT = 300;
 
     FitBox.prototype = {
-        NAME: 'stackla.fitbox',
         log: function (msg, type) {
             var that = this;
             if (!that.debug) {
@@ -243,7 +242,7 @@
     };
 
     // Make a jquery-like usage
-    $.fn.fitBox = function (options) {
+    $.fn.fitbox = function (options) {
         $.each(this, function () {
             var $el = $(this),
                 fitbox = $el.data('fitbox');
