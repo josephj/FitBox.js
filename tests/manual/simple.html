@@ -29,10 +29,7 @@ input[type=number] {
 </head>
 <body>
     <h1>FitBox</h1>
-    <pre>$('.foo').fitbox({
-    adjustAfterWindowResize: true,
-    minFontSize: '24px'
-});</pre>
+    <pre>$('.foo').fitbox();</pre>
     <div class="foo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../../src/fitbox.js"></script>
@@ -40,10 +37,7 @@ input[type=number] {
     (function () {
         var startTime, duration;
         startTime = new Date();
-        $('.foo').fitbox({
-            adjustAfterWindowResize: true,
-            minFontSize: '24px'
-        });
+        $('.foo').fitbox();
         duration = parseInt((new Date()) - startTime, 10);
         console.log(duration + 'ms spent');
     }());
